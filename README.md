@@ -7,6 +7,10 @@ degree-corrected mixed membership model (DCMM) with Mixed-SCORE. Split-half reli
 of the managers selects K = 4 profiles (Blue chip, Income, Growth, Small value), whose movement between the two
 dates we then measure against a bootstrap noise floor.
 
+## Abstract
+
+Institutional 13F filings record investment managers' holdings of U.S. equities, revealing shared ownership across the market. This paper studies this structure as a community detection problem on a between-stock cosine co-ownership network of S\&P 500 stocks, built from the binary holdings of active managers in two snapshots: December 2006, at the end of a calm bull market, and June 2008, during a financial crisis. Given heavy degree heterogeneity, we first fit a Degree-Corrected Block Model (DCBM) with SCORE. However, the eigengap method selects $K = 2$, which features a popularity split that a degree-preserving null network can also produce. We therefore switch to a Degree-Corrected Mixed Membership model (DCMM) with Mixed-SCORE, selecting $K = 4$ profiles by split-half replication across disjoint halves of managers: Blue Chip, Income, Growth, and Small Value. Blue Chip replicates stably but is almost entirely explained by owner count ($R^2 \approx 0.95$) due to residual degree effects. The other three profiles, replicating across manager halves ($\tilde{r} = 0.71$--$0.86$) and not explained by GICS sector, are align with size, dividend yield, book-to-market ratio, and the styles of their primary owners. Across snapshots, the largest net flows run from Growth to Small Value ($+0.18$; median return $-36\%$) and from Growth to Income ($+0.17$; $-23\%$). These flows are consistent with growth funds selling falling stocks to quant, value, and dividend investors, along with a smaller flow of commodity winners into Growth. Our results suggest that split-half reliability is a more informative criterion than eigengaps for choosing $K$ in dense ownership networks.
+
 ## Quick start
 
 ```bash
