@@ -1,0 +1,20 @@
+# Data preparation settings (prepare_data.py). Dates, filters and sanity checks.
+data_dir: data
+out_dir: results/pipeline
+seed: 236
+open_date: "2099-12-31"          # fill for NULL valid_to in interval tables
+
+# 13F report dates analysed in the paper
+dates: ["2006-12-31", "2008-06-30"]
+
+universe:
+  shrcd_keep: [10, 11]             # common shares only
+  expect_members: {"2006-12-31": 499, "2008-06-30": 500}
+  expect_after_shrcd: {"2006-12-31": 476, "2008-06-30": 473}
+
+holdings:
+  late_vintage: rescale           # restate later-vintage 13F shares to the report-date split basis
+  over_one: uncapped
+  passive_share: 0.90             # passive manager = holds > 90% of that date's universe stocks
+  expect_W_shape: {"2006-12-31": [476, 2495], "2008-06-30": [472, 2742]}
+  expect_density: [0.17, 0.20]

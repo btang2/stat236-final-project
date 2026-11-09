@@ -1,0 +1,12 @@
+# Exact versions that reproduced the paper (Python 3.13). k-means and eigen-solvers can differ slightly
+# across library versions, so other versions may move results in the second decimal.
+numpy==2.3.0
+pandas==2.2.3
+scipy==1.15.3
+scikit-learn==1.7.1
+statsmodels==0.14.5
+matplotlib==3.10.5
+pyarrow==26.0.0     # parquet caches
+PyYAML==6.0.2
+pytest==9.2.0       # tests only
+wrds==3.5.0         # only for scripts/download_wrds.py

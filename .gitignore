@@ -1,0 +1,13 @@
+# WRDS data may not be redistributed
+data/*
+!data/README.md
+
+# generated outputs (rerun ./run_all.sh)
+results/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+.ipynb_checkpoints/
